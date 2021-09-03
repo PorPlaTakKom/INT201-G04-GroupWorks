@@ -2,6 +2,9 @@
 let dice = {
     side: 6 //กำหนดค่าลูกเต๋า
 }
+
+// let dic = 6 
+
 function play(round) {// round กำหนดจำนวนรอบ
     for(let count=1;count <= round ;count++){ // กำหนดจำนวนรอบในการเล่น
         player1.roll = rollDice(); //player1 ทอยลูกเต๋า
@@ -13,7 +16,8 @@ function play(round) {// round กำหนดจำนวนรอบ
             console.log(player1);
             console.log(player2);
             console.log(player1.name +":  Win!!")
-        }else if(player1.roll =player2.roll){ // เสมอ
+        }else if(player1.roll =player2.roll){ // เสมอ | else if(player1.roll === player2.roll)
+      
             player1.result = results.DRAW
             player2.result = results.DRAW
             console.log(player1);
@@ -39,6 +43,7 @@ const results = {   //เก็บค่าผลการแข่งขัน
 function rollDice() {   //สุ่มเลขลูกเต๋า
     return p = Math.floor( 1 + Math.random() * 6 ); //Math.floor: กำหนดผลลัพธ์ให้เป็นจำนวนเต็ม
 }                                                   //Math.random: สุ่มเลขในช่วง 1-6
+                                                    //return Math.floor( 1 + Math.random() * 6 ); ได้เลย
 
 
 let player1 = { //เก็บค่าต่างๆของ player1
